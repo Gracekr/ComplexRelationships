@@ -17,7 +17,7 @@ public abstract class Event {
     private String Location;
     private String title;
 
-    @OneToMany(mappedBy = "event_id")
+    @OneToMany(mappedBy = "event")
     private List<Guest> guests;
 
     public Event() {

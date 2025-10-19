@@ -19,7 +19,7 @@ public class Chapter {
     private Member president;
 
     @OneToMany(mappedBy = "chapter")
-    private List<Member> chapterMember;
+    private List<Member> Member;
 
     public Chapter() {
     }
@@ -56,11 +56,11 @@ public class Chapter {
         this.president = president;
     }
 
-    public List<Member> getChapterMember() {
-        return chapterMember;
+    public List<Member> getMember() {
+        return Member;
     }
 
-    public void setChapterMember(List<Member> chapterMember) {
-        this.chapterMember = chapterMember;
+    public void setMember(List<Member> member) {
+        Member = member;
     }
 }

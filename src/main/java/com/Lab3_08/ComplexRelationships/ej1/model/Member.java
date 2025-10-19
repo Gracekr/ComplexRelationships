@@ -3,6 +3,7 @@ package com.Lab3_08.ComplexRelationships.ej1.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 public class Member {
@@ -13,13 +14,13 @@ public class Member {
     private String name;
 
     @Enumerated(EnumType.STRING)
-    private String memberStatus;
+    private MemberStatus memberStatus;
 
-    private LocalDate renewal_date;
+    private Date renewal_date;
 
     @ManyToOne
     @JoinColumn(name = "chapter_id")
-    private Chapter chapter_id;
+    private Chapter chapter;
 
     public Member() {
     }
@@ -40,27 +41,27 @@ public class Member {
         this.name = name;
     }
 
-    public String getMemberStatus() {
+    public MemberStatus getMemberStatus() {
         return memberStatus;
     }
 
-    public void setMemberStatus(String memberStatus) {
+    public void setMemberStatus(MemberStatus memberStatus) {
         this.memberStatus = memberStatus;
     }
 
-    public LocalDate getRenewal_date() {
+    public Date getRenewal_date() {
         return renewal_date;
     }
 
-    public void setRenewal_date(LocalDate renewal_date) {
+    public void setRenewal_date(Date renewal_date) {
         this.renewal_date = renewal_date;
     }
 
-    public Chapter getChapter_id() {
-        return chapter_id;
+    public Chapter getChapter() {
+        return chapter;
     }
 
-    public void setChapter_id(Chapter chapter_id) {
-        this.chapter_id = chapter_id;
+    public void setChapter(Chapter chapter) {
+        this.chapter = chapter;
     }
 }

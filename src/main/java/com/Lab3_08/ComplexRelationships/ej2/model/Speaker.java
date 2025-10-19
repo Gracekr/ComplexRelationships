@@ -16,7 +16,7 @@ public class Speaker {
 
     @ManyToOne
     @JoinColumn(name = "conference_id")
-    private List<Conference> speakers;
+    private Conference conference;
 
     public Speaker() {
     }
@@ -45,11 +45,11 @@ public class Speaker {
         this.presentationDuration = presentationDuration;
     }
 
-    public List<Conference> getSpeakers() {
-        return speakers;
+    public Conference getConference() {
+        return conference;
     }
 
-    public void setSpeakers(List<Conference> speakers) {
-        this.speakers = speakers;
+    public void setConference(Conference conference) {
+        this.conference = conference;
     }
 }

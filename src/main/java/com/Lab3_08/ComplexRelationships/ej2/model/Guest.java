@@ -11,6 +11,7 @@ public class Guest {
     private String name;
 
     @Enumerated(EnumType.STRING)
+    private GuestStatus guestStatus;
 
     @ManyToOne
     @JoinColumn(name = "event_id")
@@ -41,5 +42,13 @@ public class Guest {
 
     public void setEvent(Event event) {
         this.event = event;
+    }
+
+    public GuestStatus getGuestStatus() {
+        return guestStatus;
+    }
+
+    public void setGuestStatus(GuestStatus guestStatus) {
+        this.guestStatus = guestStatus;
     }
 }
